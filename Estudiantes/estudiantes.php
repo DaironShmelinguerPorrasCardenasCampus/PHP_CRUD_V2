@@ -65,8 +65,8 @@ $all = $data->selectAll();
         <table class="table table-custom ">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">NOMBREs</th>
+              <th scope="col">ID</th>
+              <th scope="col">NOMBRES</th>
               <th scope="col">DIRECCION</th>
               <th scope="col">LOGROS</th>
               <th scope="col">DETALLE</th>
@@ -155,6 +155,57 @@ $all = $data->selectAll();
                   type="text"
                   id="logros"
                   name="logros"
+                  class="form-control"  
+                 
+                />
+              </div>
+              <div class="mb-1 col-12">
+                <label for="skills" class="form-label">Skills</label>
+                <input 
+                  type="text"
+                  id="skills"
+                  name="skills"
+                  class="form-control"  
+                 
+                />
+              </div>
+              <div class="mb-1 col-12">
+                <label for="review" class="form-label">Review</label>
+                <input 
+                  type="text"
+                  id="review"
+                  name="review"
+                  class="form-control"  
+                 
+                />
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="ser" class="form-label">Ser</label>
+                <input 
+                  type="text"
+                  id="ser"
+                  name="ser"
+                  class="form-control"  
+                 
+                />
+              </div>
+              <div class="mb-1 col-12">
+                <label for="ingles" class="form-label">Inglés</label>
+                <input 
+                  type="text"
+                  id="ingles"
+                  name="ingles"
+                  class="form-control"  
+                 
+                />
+              </div>
+              <div class="mb-1 col-12">
+                <label for="especialidad" class="form-label">Especialidad</label>
+                <input 
+                  type="text"
+                  id="especialidad"
+                  name="especialidad"
                   class="form-control"  
                  
                 />

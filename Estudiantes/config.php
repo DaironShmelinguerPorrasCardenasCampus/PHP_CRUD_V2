@@ -62,6 +62,7 @@ class Config{
         return $this-> logros;
     }
 
+    
     public function setSkills($skills){
         $this->skills = $skills;
     }
