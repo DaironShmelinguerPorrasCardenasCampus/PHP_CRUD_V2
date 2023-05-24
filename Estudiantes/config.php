@@ -9,15 +9,26 @@ class Config{
     private $nombres;
     private $direccion;
     private $logros;
+    private $skills;
+    private $review;
+    private $ser;
+    private $ingles;
+    private $especialidad;
     protected $dbCnx; //conexion a la base de datos
 
     //CONSTRUCTOR
-    public function __construct($id = 0 , $nombres= "", $direccion = "", $logros = "")
+    public function __construct($id = 0 , $nombres= "", $direccion = "", $logros = "",$skills = "",$review="",$ser="",$ingles="",$especialidad="")
     {
         $this->id = $id ;
         $this->nombres = $nombres;
         $this->direccion = $direccion;
         $this->logros = $logros;
+        $this->skills = $skills;
+        $this->review = $review;
+        $this->ser = $ser;
+        $this->ingles = $ingles ;
+        $this->especialidad = $especialidad;
+
         $this->dbCnx = new PDO(DB_TYPE.":host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PWD, [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC] );
     }
 
@@ -50,11 +61,46 @@ class Config{
     public function getLogros(){
         return $this-> logros;
     }
+
+    public function setSkills($skills){
+        $this->skills = $skills;
+    }
+    public function getSkills(){
+        return $this-> skills;
+    }
+
+    public function setReview($review){
+        $this->review  = $review ;
+    }
+    public function getReview(){
+        return $this-> review ;
+    }
+
+    public function setSer($ser){
+        $this->ser  = $ser;
+    }
+    public function getSer(){
+        return $this-> ser;
+    }
+
+    public function setIngles($ingles){
+        $this->ingles  = $ingles;
+    }
+    public function getIngles(){
+        return $this-> ingles ;
+    }
+
+    public function setEspecialidad($especialidad){
+        $this->especialidad  = $especialidad;
+    }
+    public function getEspecialidad(){
+        return $this-> especialidad ;
+    }
     //INSERTAR
     public function insertData(){
         try {
-            $stm = $this -> dbCnx -> prepare("INSERT INTO campers(nombres,direccion,logros) values(?,?,?)");// método para inserytar datos en la database - tabla campers
-            $stm -> execute([$this->nombres , $this->direccion, $this->logros]);//
+            $stm = $this -> dbCnx -> prepare("INSERT INTO campers(nombres,direccion,logros,skills,review,ser,ingles,especialidad) values(?,?,?,?,?,?,?,?)");// método para inserytar datos en la database - tabla campers
+            $stm -> execute([$this->nombres , $this->direccion, $this->logros, $this->skills,$this-> review ,$this-> ser,$this-> ingles ,$this-> especialidad]);//
         } catch (Exception $e) {
             return $e->getMessage();
         }

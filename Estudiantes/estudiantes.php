@@ -70,6 +70,11 @@ $all = $data->selectAll();
               <th scope="col">DIRECCION</th>
               <th scope="col">LOGROS</th>
               <th scope="col">DETALLE</th>
+              <th scope="col">SKILLS</th>
+              <th scope="col">REVIEW</th>
+              <th scope="col">SER</th>
+              <th scope="col">INGLÉS</th>
+              <th scope="col">ESPECIALIDAD</th>
             </tr>
           </thead>
           <tbody class="" id="tabla"> <!-- AQUÍ ES DONDE TRAEMOS LOS DATOS REGISTRADOS EN LA BASE DE DATOS -->
@@ -85,6 +90,11 @@ $all = $data->selectAll();
               <td> <?php echo $val['nombres']?></td>
               <td> <?php echo $val['direccion']?></td>
               <td> <?php echo $val['logros']?></td>
+              <td> <?php echo $val['skills']?></td>
+              <td> <?php echo $val['review']?></td>
+              <td> <?php echo $val['ser']?></td>
+              <td> <?php echo $val['ingles']?></td>
+              <td> <?php echo $val['especialidad']?></td>
               <!-- incluimos el btn para elimiar -->
               <td> <a class="btn btn-danger" href="borrasEstudiantes.php?id=<?=$val['id']?>&req=delete">BORRAR</a></td> <!-- val tiene los valores -->
             <tr>

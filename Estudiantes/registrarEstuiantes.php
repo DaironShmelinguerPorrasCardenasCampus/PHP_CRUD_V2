@@ -14,7 +14,11 @@ if(isset($_POST['guardar'])) {// guardar el el nombre del submit
     $config->setNombres($_POST['nombres']); // el name = nombres de estudiantes.php linea 103
     $config-> setDireccion($_POST['direccion']); // linea 113
     $config-> setLogros($_POST['logros']);//linea 123 
-
+    $config-> setLogros($_POST['skills']);
+    $config-> setLogros($_POST['review']);
+    $config-> setLogros($_POST['ser']);
+    $config-> setLogros($_POST['ingles']);
+    $config-> setLogros($_POST['especialidad']);
     // invocar método para insertar datos
     $config-> insertData();
     echo "<script> alert('LOS DATOS FUERON GUARDADOS EXITOSAMENTE');document.location = 'estudiantes.php'</script>";
