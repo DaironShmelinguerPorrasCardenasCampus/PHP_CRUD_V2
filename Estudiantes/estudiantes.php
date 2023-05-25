@@ -69,7 +69,6 @@ $all = $data->selectAll();
               <th scope="col">NOMBRES</th>
               <th scope="col">DIRECCION</th>
               <th scope="col">LOGROS</th>
-              <th scope="col">DETALLE</th>
               <th scope="col">SKILLS</th>
               <th scope="col">REVIEW</th>
               <th scope="col">SER</th>
@@ -97,7 +96,8 @@ $all = $data->selectAll();
               <td> <?php echo $val['especialidad']?></td>
               <!-- incluimos el btn para elimiar -->
               <td> <a class="btn btn-danger" href="borrasEstudiantes.php?id=<?=$val['id']?>&req=delete">BORRAR</a></td> <!-- val tiene los valores -->
-            <tr>
+              <td> <a class="btn btn-primary" href="editarEstudiantes.php?id=<?=$val['id']?>">ACTUALIZAR</a></td> 
+              <tr>
 
           </tbody>
             <?php }?>
