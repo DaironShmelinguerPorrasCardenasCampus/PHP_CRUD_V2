@@ -144,8 +144,8 @@ class Config{
     //ACTUALIZAR PARTE 2 - AQUÍ ACTUALIZAMOS ESOS DATOS EN LA DATABASE
     public function update(){
         try {
-            $stm = $this -> dbCnx -> prepare("UPDATE campers SET nombres = ? , direcccion = ?, logros = ? WHERE id = ?");
-            $stm-> execute([$this->nombres,$this->direccion,$this->logros]);
+            $stm = $this -> dbCnx -> prepare("UPDATE campers SET nombres = ? , direccion = ?, logros = ?, skills = ?, review = ?, ser = ?, ingles = ?, especialidad = ?  WHERE id = ?");
+            $stm-> execute([$this->nombres,$this->direccion,$this->logros,$this->skills,$this->review,$this->ser,$this->ingles,$this->especialidad,$this->id]);
         } catch (Exception $e) {
             return $e->getMessage();
         }
