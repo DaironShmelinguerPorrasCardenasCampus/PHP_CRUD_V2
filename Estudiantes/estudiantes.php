@@ -74,6 +74,8 @@ $all = $data->selectAll();
               <th scope="col">SER</th>
               <th scope="col">INGLÉS</th>
               <th scope="col">ESPECIALIDAD</th>
+              <th scope="col">BORRAS</th>
+              <th scope="col">ACTUALIZAR</th>
             </tr>
           </thead>
           <tbody class="" id="tabla"> <!-- AQUÍ ES DONDE TRAEMOS LOS DATOS REGISTRADOS EN LA BASE DE DATOS -->
