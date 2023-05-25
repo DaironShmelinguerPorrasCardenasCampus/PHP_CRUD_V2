@@ -129,6 +129,27 @@ class Config{
             return $e->getMessage();
         }
     }
+
+    //ACTUALIZAR PARTE 1 - AQUÍ ES DONDE TRAEMOS LOS DATOS A LA PÁGITA EDITARESTUDIANTES.PHP
+    public function selectOne(){
+        try {
+            $stm = $this -> dbCnx -> prepare("SELECT * FROM campers WHERE id = ?");
+            $stm-> execute([$this->id]);
+            return $stm-> fetchAll();
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    //ACTUALIZAR PARTE 2 - AQUÍ ACTUALIZAMOS ESOS DATOS EN LA DATABASE
+    public function update(){
+        try {
+            $stm = $this -> dbCnx -> prepare("UPDATE campers SET nombres = ? , direcccion = ?, logros = ? WHERE id = ?");
+            $stm-> execute([$this->nombres,$this->direccion,$this->logros]);
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+    }
     
 }
 
