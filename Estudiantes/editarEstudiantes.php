@@ -16,6 +16,15 @@
         $data-> setNombres($_POST['nombres']);
         $data-> setDireccion($_POST['direccion']);
         $data-> setLogros($_POST['logros']);
+        $data-> setSkills($_POST['skills']);
+        $data-> setReview($_POST['review']);
+        $data-> setSer($_POST['ser']);
+        $data-> setIngles($_POST['ingles']);
+        $data-> setEspecialidad($_POST['especialidad']);
+
+        //INVOCAR MÉTODO
+        $data->update();
+        echo "<script> alert ('DATOS ACTUALIZADOS EXITOSAMENTE');document.location='estudiantes.php'</script>";
     }   
     
 ?>
@@ -97,6 +106,66 @@
                   name="logros"
                   class="form-control"  
                   value ="<?php echo $val['logros'];?>" 
+                  
+                />
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="skills" class="form-label">Skills</label>
+                <input 
+                  type="text"
+                  id="skills"
+                  name="skills"
+                  class="form-control"  
+                  value ="<?php echo $val['skills'];?>" 
+                  
+                />
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="review" class="form-label">Review</label>
+                <input 
+                  type="text"
+                  id="review"
+                  name="review"
+                  class="form-control"  
+                  value ="<?php echo $val['review'];?>" 
+                  
+                />
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="ser" class="form-label">Ser</label>
+                <input 
+                  type="text"
+                  id="sers"
+                  name="ser"
+                  class="form-control"  
+                  value ="<?php echo $val['ser'];?>" 
+                  
+                />
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="ingles" class="form-label">Ingles</label>
+                <input 
+                  type="text"
+                  id="ingles"
+                  name="ingles"
+                  class="form-control"  
+                  value ="<?php echo $val['ingles'];?>" 
+                  
+                />
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="especialidad" class="form-label">Especialidad</label>
+                <input 
+                  type="text"
+                  id="especialidad"
+                  name="especialidad"
+                  class="form-control"  
+                  value ="<?php echo $val['especialidad'];?>" 
                   
                 />
               </div>
