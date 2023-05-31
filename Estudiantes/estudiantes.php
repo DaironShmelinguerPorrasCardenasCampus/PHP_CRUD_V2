@@ -1,7 +1,7 @@
 <?php
 
-require_once("config.php"); //TRAEMOS LA CLASE
-$data = new Config(); //INSTACIAMOS LA CLASE EN UNA VARIABLE NUEVA
+require_once("Estudiante.php"); //TRAEMOS LA CLASE
+$data = new Estudiante(); //INSTACIAMOS LA CLASE EN UNA VARIABLE NUEVA
 
 //VARIABLE QUE GUARDA TODOS LOS DATOS O REGISTROS
 $all = $data->selectAll();

@@ -1,7 +1,7 @@
 <!-- AQUÍ  -->
 <?php
-    require_once("config.php");
-    $data = new Config();
+    require_once("Estudiante.php");
+    $data = new Estudiante();
 
     $id = $_GET['id']; //usamos array asociativo para los get
     $data->setId($id);

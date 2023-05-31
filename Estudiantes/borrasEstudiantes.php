@@ -1,7 +1,7 @@
 <?php
 
-require_once('config.php');
-$record = new Config();
+require_once('Estudiante.php');
+$record = new Estudiante();
 
 
 if(isset($_GET['id']) && isset($_GET['req'])){ //req 

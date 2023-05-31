@@ -1,8 +1,9 @@
 <?php
 
-require_once("db.php");
+require_once("../Config/db.php");
+require_once("../Config/Conectar.php");
 
-class Config{
+class Estudiante extends Conectar{
     //atributos se llaman como los campos de la tabla
 
     private $id;
@@ -14,10 +15,10 @@ class Config{
     private $ser;
     private $ingles;
     private $especialidad;
-    protected $dbCnx; //conexion a la base de datos
+     //conexion a la base de datos
 
     //CONSTRUCTOR
-    public function __construct($id = 0 , $nombres= "", $direccion = "", $logros = "",$skills = "",$review="",$ser="",$ingles="",$especialidad="")
+    public function __construct($id = 0 , $nombres= "", $direccion = "", $logros = "",$skills = "",$review="",$ser="",$ingles="",$especialidad="", $dbCnx = "")
     {
         $this->id = $id ;
         $this->nombres = $nombres;
@@ -28,8 +29,7 @@ class Config{
         $this->ser = $ser;
         $this->ingles = $ingles ;
         $this->especialidad = $especialidad;
-
-        $this->dbCnx = new PDO(DB_TYPE.":host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PWD, [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC] );
+        parent::__construct($dbCnx);
     }
 
     //MÉTODOS

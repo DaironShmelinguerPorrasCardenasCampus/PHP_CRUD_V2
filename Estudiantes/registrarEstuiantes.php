@@ -7,9 +7,9 @@
     error_reporting(E_ALL);
 
 if(isset($_POST['guardar'])) {// guardar el el nombre del submit
-    require_once("config.php");
+    require_once("Estudiante.php");
 
-    $config = new Config(); // traer la clase con una variable
+    $config = new Estudiante(); // traer la clase con una variable
 
     $config->setNombres($_POST['nombres']); // el name = nombres de estudiantes.php linea 103
     $config-> setDireccion($_POST['direccion']); // linea 113
