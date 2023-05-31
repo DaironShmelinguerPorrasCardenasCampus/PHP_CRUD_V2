@@ -1,6 +1,7 @@
 <?php
 require_once("../Config/db.php");
 require_once("../Config/Conectar.php");
+require_once("LoginUser.php");
 
 class RegistrarUser extends Conectar{
 
@@ -74,6 +75,13 @@ class RegistrarUser extends Conectar{
     try {
         $stm = $this-> dbCnx -> prepare("INSERT INTO user (idCamper, email, username, password) values (?,?,?,?)");
         $stm -> execute([$this->idCamper,$this->email,$this->username, md5($this->password)]);
+
+        $login = new LOginUser();
+        $login -> setEmail($_POST['email']);
+        $login -> setPassword($_POST['password']);
+
+        $success = $login -> login();
+        
     } catch (Exception $e) {
         return $e->getMessage();
     }

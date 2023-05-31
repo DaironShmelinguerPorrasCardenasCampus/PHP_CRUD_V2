@@ -10,8 +10,14 @@ if(isset($_POST['registrarse'])){
     $registrar->setUsername($_POST['username']);
     $registrar->setPassword($_POST['password']);
 
-    $registrar->InsertData();
-    echo "<script> alert('USUARIO REGISTRADO EXITOSAMENTE');document.location = 'loginRegister.php'</script>";
+
+
+    if($registrar->checkUser($_POST['email'])){
+        echo "<script> alert('EL USUARIO YA EXISTE EN LA BASE DE DATOS');document.location = 'loginRegister.php'</script>";
+    }else{
+        $registrar->InsertData();
+        echo "<script> alert('USUARIO REGISTRADO EXITOSAMENTE');document.location = '../Home/home.php'</script>";
+    }
 }
 
 
