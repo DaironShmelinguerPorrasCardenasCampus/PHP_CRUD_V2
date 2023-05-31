@@ -1,3 +1,8 @@
+<?php
+require_once("../Estudiantes/Estudiante.php");
+$data = new Estudiante();
+$allEst = $data->selectAll();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,6 +95,14 @@
                           name="password"
                           class="form-control"  
                         />
+                    </div>
+                    <div class="mb-3">
+                    <label for="Camper" class="form-label">Camper</label>
+                       <select name="camper" id="camper">
+                        <?php foreach ($allEst as $key => $val) {?>
+                          <option value="<?php echo $val['id']?>"><?php echo $val['nombres']?></option>
+                          <?php } ?>
+                       </select>
                     </div>
                     <div class="mb-3 form-check">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
