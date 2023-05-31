@@ -41,13 +41,13 @@ session_start();
           <i class="bi bi-house-door"> </i>
           <h3 style="margin: 0px;font-weight: 800;">Home</h3>
         </a>
-        <a href="../Estudiante/estudiantes.php" style="display: flex;gap:2px;">
+        <a href="../Estudiantes/estudiantes.php" style="display: flex;gap:2px;">
           <i class="bi bi-people"></i>
           <h3 style="margin: 0px;">Estudiantes</h3>
         </a>
       
         </a>
-        <a href="/login/login.php" style="display: flex;gap:2px;color: brown;">
+        <a href="../login/loginRegister.php" style="display: flex;gap:2px;color: brown;">
           <i class="bi bi-x-square"></i>
           <h3 style="margin: 0px;">salir</h3>
         </a>
